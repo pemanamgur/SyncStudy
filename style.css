@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --primary-color: #6366F1;
+    --accent-color: #3f83f8;
+    --text-color: #333333;
+    --link-color: #2563eb;
+    --background-color: #ffffff;
+    --light-gray: #f0f0f0;
+    --gray: #808080;
+    --dark-gray: #555;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+body{
+      height: 100vh;
+      background-color: var(--background-color);
+      text-align: center;
+      padding: 2rem;
+}
+.header_content{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+.logo-icons{
+    height: 2.475rem;
+    width: 3.238rem;
+}
+.nav{
+    display:none;
+    gap:2rem ;
+}
+@media screen and (min-width : 809px) {
+    .nav{
+        display: flex;
+        gap: 2rem;
+    }
+}
+.nav-links{
+    color: #718096;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transform: color 1s;
+}
+.nav-links:hover{
+    color: var(--link-color);
+}
+.nav:hover{
+    color: var(--link-color);
+}
+.logo-text{
+    font-size: 1.5rem;
+}
+.contact-button{
+    display: none;
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    padding: 0.5rem 0.9rem;
+    color: var(--background-color);
+    font-size: 1rem;
+    font-weight: 600;
+    transform: all 1s;
+} 
+@media screen and (min-width : 809px) {
+    .contact-button{
+        display: block;
+    }
+}
+.contact-button:hover{
+    background-color: #5254f8;
+}
+.menu-button{
+    border: none;
+    display: none;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--background-color);
+    padding: 0.5rem 0.9rem;
+}
+.menu-icon{
+    height: 1.8rem;
+    width: 1.4rem;
+}
+
+@media screen and (max-width : 809px) {
+    .menu-button{
+        display : block
+    }
+}
+.main-section{
+    display: flex;
+    flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0.6rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.content-left{
+    text-align: center;
+    animation: slideFromLeft 1s ease forwards;
+    opacity: 0;
+}
+@keyframes slideFromLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+} 
+
+.section-label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.section-heading{
+    font-size: 2.2rem;
+    color: var(--text-color);
+    padding: 1rem;
+}
+.section-desc{
+    color: var(--gray);
+    font-size: 1.15rem;
+}
+.button-group{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center ;
+    padding: 1rem;
+}
+.start-button , .tour-button{
+    border: none;
+    border-radius: 0.375rem;
+    background-color: var(--primary-color);
+    padding: 0.5rem 0.9rem;
+    color: var(--background-color);
+    font-size: 1rem;
+    font-weight: 600;
+    transform: all 1s;
+}
+.tour-button{
+    background-color: var(--dark-gray);
+}
+.start-button:hover{
+    background-color: #5254f8;
+}
+.tour-button:hover{
+    background-color: var(--gray);
+}
+.content-right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.image-container{
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 60vh;
+    width: 50vw;
+}
+.section-image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media screen and (min-width : 809px) {
+    .main-section{
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 1.4rem;
+    }
+    .content-left{
+        width: 50%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .content-right{
+        width: 50%;
+    }
+    .section-heading{
+        padding: 0;
+    }
+   .button-group{
+    justify-content: start;
+    padding-left: 0;
+   }   
+   .section-label{
+    font-size: 1.1rem;
+   }
+   .section-heading{
+    font-size: 3.1rem;
+   }
+   .image-container{
+    height: 65vh;
+   }
+   .section-desc{
+    font-size: 1rem;
+   }
+}
